@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import DropdownMenu from './DropdownMenu';
+import FAQ from './FAQ';
+import './Title.css'; // Importing the CSS file
 
 const Title = () => {
   const filosofos = [
@@ -24,18 +27,25 @@ const Title = () => {
   }, [filosofos]);
 
   return (
-    <div>
-      <h1 style={{ fontFamily: 'system-ui', fontSize: '36px', color: 'black', lineHeight: '1.8' }}>
-        Habla con &nbsp;  
-        <span style={{ background: 'white', padding: '5px 10px', borderRadius: '5px', lineHeight: '1' }}>{filosofoActual}</span>
+    <div className="title-container">
+      <h1 className="title-text">
+        Habla con <br /> 
+        <span className="highlight" key={filosofoActual}>{filosofoActual}</span>
         <br /> en WhatsApp en tiempo real
       </h1>
       <button
         className="whatsapp-button"
-        onClick={() => window.open('https://wa.me/12053604731')}
+        onClick={() => window.open('https://wa.me/34623992632')}
       >
         Añádeme a WhatsApp
       </button>
+      <p className="info-text">
+        Solo añade este número a WhatsApp y podrás comenzar a hablar con estos filósofos. Hazles preguntas y obtén su punto de vista en tiempo real. Descubre nuevas perspectivas y profundiza en su pensamiento filosófico.
+      </p>
+      <FAQ />
+      <footer className="app-footer">
+        &copy; {new Date().getFullYear()} Filosofia.io
+      </footer>
     </div>
   );
 };
