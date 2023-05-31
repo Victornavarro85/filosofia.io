@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Title from './Title';
-import NewsletterForm from './NewsletterForm';
+
 
 const App = () => {
   const filosofos = [
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <Title filosofo={filosofoActual} />
-      <NewsletterForm/>
+
     </div>
   );
 };

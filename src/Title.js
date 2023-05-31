@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DropdownMenu from './DropdownMenu';
 import FAQ from './FAQ';
 import './Title.css'; // Importing the CSS file
+import NewsletterForm from './NewsletterForm';
 
 const Title = () => {
   const filosofos = [
@@ -44,6 +45,7 @@ const Title = () => {
       </p>
       <FAQ />
       <footer className="app-footer">
+      <NewsletterForm/>
         &copy; {new Date().getFullYear()} Filosofia.io
       </footer>
     </div>
